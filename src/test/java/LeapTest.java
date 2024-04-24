@@ -13,47 +13,65 @@ public class LeapTest {
 
     @Test
     public void testYearNotDivBy4InCommonYear() {
-        assertThat(leap.isLeapYear(2015)).isFalse();
+        boolean actual=leap.isLeapYear(2015);
+
+        assertThat(actual).isFalse();
     }
 
     @Test
     public void testYearDivBy2NotDivBy4InCommonYear() {
-        assertThat(leap.isLeapYear(1970)).isFalse();
+        boolean actual=leap.isLeapYear(1970);
+
+        assertThat(actual).isFalse();
     }
 
     @Test
     public void testYearDivBy4NotDivBy100InLeapYear() {
-        assertThat(leap.isLeapYear(1996)).isTrue();
+        boolean actual=leap.isLeapYear(1996);
+
+        assertThat(actual).isTrue();
     }
 
     @Test
     public void testYearDivBy4And5InLeapYear() {
-        assertThat(leap.isLeapYear(1960)).isTrue();
+        boolean actual=leap.isLeapYear(1960);
+
+        assertThat(actual).isTrue();
     }
 
     @Test
     public void testYearDivBy100NotDivBy400InCommonYear() {
-        assertThat(leap.isLeapYear(2100)).isFalse();
+        boolean actual=leap.isLeapYear(2100);
+
+        assertThat(actual).isFalse();
     }
 
     @Test
     public void testYearDivBy100NotDivBy3IsNotLeapYear() {
-        assertThat(leap.isLeapYear(1900)).isFalse();
+        boolean actual=leap.isLeapYear(1900);
+
+        assertThat(actual).isFalse();
     }
 
     @Test
     public void testYearDivBy400InLeapYear() {
-        assertThat(leap.isLeapYear(2000)).isTrue();
+        boolean actual=leap.isLeapYear(2000);
+
+        assertThat(actual).isTrue();
     }
 
     @Test
     public void testYearDivBy400NotDivBy125IsLeapYear() {
-        assertThat(leap.isLeapYear(2400)).isTrue();
+        boolean actual=leap.isLeapYear(2400);
+
+        assertThat(actual).isTrue();
     }
 
     @Test
     public void testYearDivBy200NotDivBy400InCommonYear() {
-        assertThat(leap.isLeapYear(1800)).isFalse();
+        boolean actual=leap.isLeapYear(1800);
+
+        assertThat(actual).isFalse();
     }
 }
 
